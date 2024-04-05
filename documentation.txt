@@ -1,0 +1,30 @@
+convex in frontend
+  import { api } from "@/convex/_generated/api";
+  import { useConvex } from "convex/react";
+  const convex = useConvex();
+
+  // if some async tasks have to be done before this
+  await convex.query(api.user.getUser, {
+    email: user?.email,
+  });
+
+  await convex.mutation(api.user.createUser, {
+    name: user.given_name,
+    email: user.email,
+    image: user.picture,
+  });
+
+
+  // if no async tasks have to be done before this
+  getUser = useQuery(api.user.getUser);
+  await useQuery({email: user?.email})
+
+  createUser = useMutation(api.user.createUser);
+  await createUser({
+    name: user.given_name,
+    email: user.email,
+    image: user.picture,
+  })
+
+convex in backend
+  users.ts
