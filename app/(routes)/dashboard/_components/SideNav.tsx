@@ -6,6 +6,7 @@ import { useConvex, useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { toast } from "sonner";
 import { FileListContext } from "@/app/_context/FilesListContext";
+import { AlignJustify } from "lucide-react";
 
 function SideNav() {
   const { user }: any = useKindeBrowserClient();
@@ -46,19 +47,20 @@ function SideNav() {
 
   return (
     <div className=" h-screen fixed w-72 borde-r border-[1px] p-6 flex flex-col ">
-      <div className="flex-1">
-        <SideNavTopSection
-          user={user}
-          setActiveTeamInfo={(activeTeam: TEAM) => setActiveTeam(activeTeam)}
-        />
-      </div>
-
-      <div>
-        <SideNavBottomSection
-          totalFiles={totalFiles}
-          onFileCreate={onFileCreate}
-        />
-      </div>
+      <>
+        <div className="flex-1">
+          <SideNavTopSection
+            user={user}
+            setActiveTeamInfo={(activeTeam: TEAM) => setActiveTeam(activeTeam)}
+          />
+        </div>
+        <div>
+          <SideNavBottomSection
+            totalFiles={totalFiles}
+            onFileCreate={onFileCreate}
+          />
+        </div>
+      </>
     </div>
   );
 }

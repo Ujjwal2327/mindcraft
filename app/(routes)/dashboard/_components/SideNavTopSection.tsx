@@ -60,7 +60,7 @@ function SideNavTopSection({ user, setActiveTeamInfo }: any) {
         <PopoverTrigger>
           <div className="flex items-center gap-3 hover:bg-slate-200 p-3 rounded-lg cursor-pointer">
             <Image src="/logo.png" alt="logo" width={40} height={40} />
-            <h2 className="flex gap-2 items-center font-bold text-[17px] ">
+            <h2 className="flex gap-2 items-center font-bold text-[17px] line-clamp-1 w-48 ">
               {activeTeam?.teamName}
               <ChevronDown />
             </h2>
@@ -72,7 +72,7 @@ function SideNavTopSection({ user, setActiveTeamInfo }: any) {
             {teamList?.map((team, index) => (
               <h2
                 key={index}
-                className={`p-2 hover:bg-blue-500 hover:text-white rounded-lg mb-1 cursor-pointer ${
+                className={`p-2 hover:bg-blue-500 hover:text-white rounded-lg mb-1 cursor-pointer line-clamp-1 ${
                   activeTeam?._id == team._id && "bg-blue-500 text-white"
                 }`}
                 onClick={() => setActiveTeam(team)}

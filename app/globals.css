@@ -103,5 +103,5 @@ h6.ce-header {
 .custom-scrollbar {}
 
 * {
-  @apply custom-scrollbar;
+  @apply custom-scrollbar overflow-y-auto;
 }
