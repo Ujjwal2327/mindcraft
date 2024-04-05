@@ -7,7 +7,7 @@ function Hero() {
     <section className="bg-black h-screen pt-20">
       <div className="flex items-baseline justify-center pt-20">
         <h2 className="text-white border px-3 p-2 rounded-full text-center border-white">
-          See What's New | <span className="text-sky-300">AI Diagram</span>
+          Documents | <span className="text-sky-300">Diagrams</span>
         </h2>
       </div>
       <div className="mx-auto max-w-screen-xl px-4 py-12 lg:flex  ">

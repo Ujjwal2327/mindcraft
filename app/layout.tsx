@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Mindcraft",
-  description: "Documents and Diagrams made easy ",
+  description: "All-in-one markdown editor, collaborative canvas, and diagram-as-code builder",
 };
 
 export default function RootLayout({
