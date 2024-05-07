@@ -12,7 +12,12 @@ function Header() {
   return (
     <header className="bg-black absolute w-full top-0">
       <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
-        <Image src="/logo.png" alt="logo" width={50} height={50} />
+        <div className="flex justify-center items-center">
+          <Image src="/logo.png" alt="logo" width={50} height={50} />
+          <h1 className="text-3xl text-sky-300 font-extrabold hidden sm:block">
+            Mindcraft
+          </h1>
+        </div>
 
         <div className="flex flex-1 items-center justify-end">
           <div className="flex items-center gap-4">
