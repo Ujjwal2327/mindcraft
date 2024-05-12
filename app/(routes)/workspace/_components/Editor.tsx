@@ -106,7 +106,7 @@ function Editor({
 
   return (
     <div>
-      <div id="editorjs" className="ml-10"></div>
+      <div id="editorjs" className="pl-16"></div>
     </div>
   );
 }

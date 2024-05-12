@@ -100,8 +100,11 @@ h6.ce-header {
   }
 }
 
-.custom-scrollbar {}
-
 * {
-  @apply custom-scrollbar overflow-y-auto;
+  scrollbar-width: none;
+}
+
+/* Colorful scrollbar!  */
+::-webkit-scrollbar {
+  scrollbar-color: red, orange;
 }

@@ -23,7 +23,7 @@ function Workspace({ params }: any) {
   }, []);
 
   return (
-    <div>
+    <div className="h-screen">
       <WorkspaceHeader
         filename={fileData?.fileName || "File Name"}
         onSave={() => setTriggerSave(!triggerSave)}
@@ -32,22 +32,26 @@ function Workspace({ params }: any) {
       {/* Workspace Layout  */}
       <div className="grid grid-cols-1 md:grid-cols-2">
         {/* Document  */}
-        <div className=" h-4/5">
+        <div>
           <h2 className="text-center font-extrabold">Notion</h2>
-          <Editor
-            onSaveTrigger={triggerSave}
-            fileId={fileId}
-            fileData={fileData}
-          />
+          <div className=" h-[85vh]">
+            <Editor
+              onSaveTrigger={triggerSave}
+              fileId={fileId}
+              fileData={fileData}
+            />
+          </div>
         </div>
         {/* Whiteboard/canvas  */}
-        <div className=" h-4/5 border-l border-black mr-10">
+        <div>
           <h2 className="text-center font-extrabold">Excalidraw</h2>
-          <Canvas
-            onSaveTrigger={triggerSave}
-            fileId={fileId}
-            fileData={fileData}
-          />
+          <div className=" h-[85vh] border-l border-black bottom-2 mr-10">
+            <Canvas
+              onSaveTrigger={triggerSave}
+              fileId={fileId}
+              fileData={fileData}
+            />
+          </div>
         </div>
       </div>
     </div>

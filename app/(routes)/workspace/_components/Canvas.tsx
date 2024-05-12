@@ -33,7 +33,7 @@ function Canvas({
   }, [onSaveTrigger]);
 
   return (
-    <div style={{ height: "500px" }}>
+    <div style={{ height: "100%" }}>
       {fileData && (
         <Excalidraw
           theme="light"

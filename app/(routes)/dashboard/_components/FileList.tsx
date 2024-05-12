@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 
 export interface FILE {
   archive: boolean;
-  createdBt: string;
+  createdAt: string;
   document: string;
   fileName: string;
   teamId: string;
@@ -39,9 +39,6 @@ function FileList() {
                 Created At
               </td>
               <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                Edited
-              </td>
-              <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
                 Author
               </td>
             </tr>
@@ -60,9 +57,6 @@ function FileList() {
                   </td>
                   <td className="whitespace-nowrap px-4 py-2 text-gray-700">
                     {moment(file._creationTime).format("DD MMM YYYY")}{" "}
-                  </td>
-                  <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                    {moment(file._creationTime).format("DD MMM YYYY")}
                   </td>
                   <td className="whitespace-nowrap px-4 py-2 text-gray-700">
                     {user && (
